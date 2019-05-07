@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  html, body, div, span, applet, object, iframe,
+=======
+html, body, div, span, applet, object, iframe,
+>>>>>>> ab7c196b2ffcb843e0da905f3833d1da89e12ea5
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -68,9 +72,13 @@ ul {
 }
 
 li {
+<<<<<<< HEAD
   display: flex;
   margin: 0px;
   padding: 10px;
+=======
+  margin: 0 20px;
+>>>>>>> ab7c196b2ffcb843e0da905f3833d1da89e12ea5
 }
 
 li a {
@@ -88,28 +96,44 @@ li a:hover {
 }
 
 .news {
+<<<<<<< HEAD
   padding: 20px 0px;
   border-radius: 10px;
   background-color: #444;
   width: 86%;
   margin: 10px auto;
+=======
+  padding: 20px 7%;
+>>>>>>> ab7c196b2ffcb843e0da905f3833d1da89e12ea5
 }
 
 .news-author{
   color: #aaf;
   font-size: 18px;
+<<<<<<< HEAD
   padding: 5px 10px;
+=======
+  padding: 5px 0;
+>>>>>>> ab7c196b2ffcb843e0da905f3833d1da89e12ea5
 }
 
 .news h2 {
   color: #eaa;
   font-size: 20px;
+<<<<<<< HEAD
   padding: 5px 10px ;
+=======
+  padding: 5px 0;
+>>>>>>> ab7c196b2ffcb843e0da905f3833d1da89e12ea5
 }
 .news-content {
     color: #eee;
     font-size: 16px;
+<<<<<<< HEAD
     padding: 5px 10px;
+=======
+    padding: 5px 0;
+>>>>>>> ab7c196b2ffcb843e0da905f3833d1da89e12ea5
 }
 
 .profile {

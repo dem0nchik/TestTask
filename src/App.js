@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import News from './components/News'
 import Profile from './components/Profile'
 import Login from './components/Login'
+<<<<<<< HEAD
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logIn} from './actions/LoginAction'
@@ -36,3 +37,21 @@ const mapDispatchToProps = dispatch => ({
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+=======
+import {BrowserRouter as Router, Route,Link} from 'react-router-dom'
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+         <Navbar />
+         <Route path='/news' component={News}/>
+         <Route path='/profile' component={Profile}/>
+         <Route path='/login' component={Login}/>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+>>>>>>> ab7c196b2ffcb843e0da905f3833d1da89e12ea5
