@@ -68,7 +68,9 @@ ul {
 }
 
 li {
-  margin: 0 20px;
+  display: flex;
+  margin: 0px;
+  padding: 10px;
 }
 
 li a {
@@ -86,24 +88,28 @@ li a:hover {
 }
 
 .news {
-  padding: 20px 7%;
+  padding: 20px 0px;
+  border-radius: 10px;
+  background-color: #444;
+  width: 86%;
+  margin: 10px auto;
 }
 
 .news-author{
   color: #aaf;
   font-size: 18px;
-  padding: 5px 0;
+  padding: 5px 10px;
 }
 
 .news h2 {
   color: #eaa;
   font-size: 20px;
-  padding: 5px 0;
+  padding: 5px 10px ;
 }
 .news-content {
     color: #eee;
     font-size: 16px;
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
 .profile {

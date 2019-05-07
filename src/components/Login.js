@@ -1,5 +1,4 @@
 import React from 'react'
-import {BrowserRouter as Router, Redirect} from 'react-router-dom'
 
 class Login extends React.Component {
     state = {
@@ -13,28 +12,28 @@ class Login extends React.Component {
     }
     validate = () => {
           const {login, password} = this.state
-          if(login.trim() && password.length > 3)
+          if(login.trim() && password.trim())
               return false
           else
             return true
     }
     clickHandle = (e) => {
       const {password, login} = this.state
-        localStorage.removeItem('isLogin')
-      if(login === "admin" && +password === 12345) {
-        localStorage.setItem('isLogin', true);
+      e.preventDefault()
+
+      if(login === "Admin" && password === "12345") {
         this.setState({err: false})
+        this.props.logIn()  //action в редакс
       } else {
-        e.preventDefault()
         this.setState({err: true})
       }
     }
+
     renderErr = () => {
     if (this.state.err)
       return <p>Имя пользователя или пароль введены не верно</p>
-  	if(!this.state.err && this.state.err !== null)
-  		return <Redirect to='/profile' />
   }
+
   render() {
     return(
       <div className="login">
@@ -52,7 +51,8 @@ class Login extends React.Component {
                           id="password"
                           onChange={this.changeHandler}/></label>
           <button type="submit" disabled={this.validate()} onClick={this.clickHandle}>Отправить</button>
-          {this.renderErr() || localStorage.getItem('isLogin') && <p>Перейдите в профиль</p>}
+          {this.renderErr() || (localStorage.getItem('isLogin') && <p>Перейдите в профиль</p>)}
+
         </form>
       </div>
     )

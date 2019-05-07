@@ -1,7 +1,8 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 class Navbar extends React.Component {
+
   isLogin = () => {
     if(localStorage.getItem('isLogin'))
       return "/profile/"
@@ -14,13 +15,19 @@ class Navbar extends React.Component {
       <header className="App-header">
           <ul>
             <li>
-              <a href="/">Главная</a>
+              <Link to="/">Главная</Link>
             </li>
             <li>
-              <a href="/news/">Новости</a>
+              <Link to="/news/">Новости</Link>
             </li>
             <li>
-              <a href={this.isLogin()} >Профиль</a>
+              <Link to={this.isLogin()} >Профиль</Link>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <Link to="/login" >Войти</Link>
             </li>
           </ul>
       </header>
